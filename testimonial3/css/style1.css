@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --fig-color1:  hsl(263, 55%, 52%);
+    --fig-color2: hsl(217, 19%, 35%);
+    --fig-color3: hsl(219, 29%, 14%);
+    --fig-color4: hsl(0, 0%, 100%);
+    --bg-color:  hsl(0, 0%, 81%);
+    --font-family: "Nunito sans", sans-serif;
+    --text-color: hsl(264, 38%, 77%);
+    --absolute-white: #ffff;
+    --text-color2: hsl(210, 3%, 62%);
+    --text-color3:hsl(262, 40%, 73%);
+}
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    max-height: 100vh;
+    font-size: 13px;
+    font-weight: 300;
+}
+h1,h2,h3,h4,h5,a {
+    margin:0;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(15rem,auto);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    padding: 2rem;
+}
+.box {
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: blue;
+}
+.box:first-child {
+    background-color: var(--fig-color1);
+    grid-column: 1/3;
+    border-radius: 0.5rem;
+    line-height: 24px;
+    background-image: url("/image/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position:right top;
+}
+.box:nth-child(2){
+    background-color: var(--fig-color2);
+    grid-row: 1/2;
+    grid-column: 3/4;
+    border-radius: 0.5rem;
+}
+.box:nth-child(3){
+    background-color: var(--fig-color4);
+    border-radius: 0.5rem;
+    grid-row: 2/3;
+}
+.box:nth-child(4){
+    background-color:var(--fig-color3);
+    grid-row: 2/3;
+    grid-column: 2/4;
+    border-radius: 0.5rem;
+}
+.box:last-child{
+    background-color:var(--fig-color4);
+    grid-row: 1/3;
+    border-radius: 0.5rem;
+}
+.images {
+    display: flex;
+    align-items: center;
+}
+/**styling for daniel**/
+.head5 h4 {
+    color: var(--text-color);
+}
+.head5 span {
+    color: purple;
+}
+.box:first-child h3{
+    color: var(--text-color);
+}
+.box:first-child p {
+    color: var(--text-color3);
+}
+.box:first-child img{
+    border: 2px solid --text-color3;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/*styling for jonathan*/
+.head4 h4 {
+    color:var(--fig-color4);
+}
+.head4 span {
+    color: var(--text-color2);
+}
+.box:nth-child(2) p{
+    color: var(--text-color2);
+}
+.box:nth-child(2) h3{
+    color:var(--fig-color4);
+}
+.box:nth-child(2) img{
+    border: 2px solid var(--fig-color3);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/*styling for patrick*/
+.box:nth-child(4) p{
+    color:var(--text-color2);
+}
+.box:nth-child(4) h3{
+    color: var(--absolute-white);
+}
+.head2 h4 {
+    color: var(--absolute-white);
+}
+.head2 span{
+    color: var(--text-color2);
+}
+.box:nth-child(4) img{
+    border: 2px solid var(--fig-color3);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* styling for jean*/
+.head1 h4{
+    color: var(--fig-color3);
+}
+.head1 span{
+    color: var(--text-color2);
+}
+.box:nth-child(3) p{
+    color: var(--text-color2);
+}
+.box:nth-child(2) h3{
+    color: var(--fig-color3);
+}
+.box:nth-child(3) img{
+    border: 2px solid --text-color3;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/*styling for kira*/
+.head3 h4{
+    color: var(--fig-color3);
+}
+.head3 span{
+    color: var(--text-color2);
+}
+.box:last-child p{
+    color: var(--text-color2);
+}
+.box:last-child h3{
+    color: var(--fig-color3);
+}
+.box:last-child img{
+    border: 2px solid --text-color3;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+@media (max-width: 375px) {
+    .container{
+        display: grid;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .box {
+        font-size: 8px;
+        font-weight: 100;
+        width:100%;
+    }
+    .box:first-child {
+        grid-column: 1/2;
+    }
+    .box:nth-child(2) {
+        grid-column:1/2;
+        grid-row: 2/3;
+    }
+    .box:nth-child(3) {
+        grid-column:1/2;
+        grid-row: 3/4;
+    }
+    .box:nth-child(4) {
+        grid-column:1/2;
+        grid-row: 4/5;
+    }
+    .box:last-child {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+}
